@@ -1,18 +1,29 @@
 #include "utils.h"
 
-
-// This is the main function
+// Main function
 int main(int argc, char const *argv[])
 {
-	double sumvar = sum(55, 21);
-	double multvar = mult(9,8);
-	double subvar = sub(22.7, 10.3);
-    double divvar = division(99, 900);
+	//Ask and save a name
+	char name[20];
+	printf("%s\n", "What is your name?");
+	scanf("%s", name);
 
-	printf("%f\n", sumvar);
-    printf("%f\n", subvar );
-	printf("%f\n", divvar );
-	printf("%f\n", multvar );
+	//Ask and save a surname
+	char surname[20];
+	printf("%s\n", "What is your surname?");
+	scanf("%s", surname);
+
+	//Ask and save the age
+	int age;
+	printf("%s\n", "How old are you?");
+	scanf("%d", &age);
+
+	//Check if is older then 18
+	if (age <= 18)
+		printf("%s\n","you are still young." );
+	else
+		printf("%s\n", "you started to be old");
+
 
 	return 0;
 }
